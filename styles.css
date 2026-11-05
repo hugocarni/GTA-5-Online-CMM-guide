@@ -138,6 +138,7 @@ h2 { margin: 6px 0 8px; font-size: clamp(32px, 5vw, 54px); text-transform: upper
 .detail-panel { background: var(--panel); border: 1px solid var(--line); padding: 20px 22px; }
 .detail-panel h3 { margin: 0 0 12px; font-size: 16px; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); }
 .detail-text { margin: 0; color: var(--muted); font-family: "Special Elite", "Courier New", monospace; line-height: 1.6; }
+.detail-text + .detail-text { margin-top: 12px; }
 
 .detail-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: step; }
 .detail-list li { position: relative; padding-left: 26px; color: var(--muted); font-family: "Special Elite", "Courier New", monospace; line-height: 1.5; }
@@ -160,6 +161,39 @@ h2 { margin: 6px 0 8px; font-size: clamp(32px, 5vw, 54px); text-transform: upper
 .ficha dd { margin: 0; text-align: right; font-size: 14px; }
 .ficha.is-final { border-top-color: var(--warn); }
 .ficha.is-final .mnum { color: var(--warn); }
+
+/* Imágenes y contenido editorial */
+.hero-figure { margin: 0 0 22px; border: 1px solid var(--line); background: var(--panel-2); overflow: hidden; }
+.hero-figure img { display: block; width: 100%; height: clamp(190px, 32vw, 340px); object-fit: cover; }
+.hero-figure figcaption { padding: 10px 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; letter-spacing: .06em; }
+
+.figure { margin: 0; border: 1px solid var(--line); background: var(--panel-2); overflow: hidden; }
+.figure img { display: block; width: 100%; height: auto; }
+.figure figcaption { padding: 10px 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; letter-spacing: .06em; }
+
+.quote {
+  margin: 0; padding: 18px 22px;
+  background: var(--panel-2); border-left: 3px solid var(--accent);
+  color: var(--text); font-family: "Special Elite", "Courier New", monospace;
+  font-style: italic; line-height: 1.6;
+}
+.quote footer { margin-top: 10px; color: var(--muted); font-family: "Oswald", "Arial Narrow", sans-serif; font-style: normal; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; }
+
+.roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.role { background: var(--panel-2); border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 18px 20px; }
+.role.is-alt { border-top-color: var(--warn); }
+.role h4 { margin: 0 0 2px; font-size: 18px; text-transform: uppercase; letter-spacing: .08em; }
+.role .tag { display: block; margin-bottom: 12px; color: var(--muted); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; }
+.role ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.role li { position: relative; padding-left: 18px; color: var(--muted); font-family: "Special Elite", "Courier New", monospace; font-size: 14px; line-height: 1.5; }
+.role li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); }
+
+.heist-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; margin: 0 0 6px; background: var(--line); border: 1px solid var(--line); }
+.heist-meta div { background: var(--panel); padding: 14px 16px; }
+.heist-meta dt { margin-bottom: 4px; color: var(--muted); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; }
+.heist-meta dd { margin: 0; font-size: 16px; }
+
+.credit { margin: 4px 0 0; color: var(--muted); font-size: 11px; letter-spacing: .06em; opacity: .8; }
 
 .sections { display: grid; gap: 16px; }
 .box { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--warn); padding: 20px 22px; }
